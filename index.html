@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>AULA 78 AVANÇADO</title>
+    </head>
+
+    <p>
+        Como declarar Arrays?
+        <h4 id = "declarationOfArrays"></h4>
+   </p>
+    <hr>
+    <p>
+        Como buscar o primeiro elemento?
+        <h4 id="accessFirtsElement"></h4>
+    </p>
+    <hr>
+    <p>
+        Como buscar o segundo elemento?
+        <h4 id="accessSecondElement"></h4>
+    </p>
+    <hr>
+    <p>
+       Como buscar o terceiro elemento?
+        <h4 id="accessThirdElement"></h4>
+    </p>
+    <hr>
+    <p>
+        Como buscar o comprimento do array?
+        <h4 id="display_length_of_array"></h4>
+    </p>
+    <hr>
+    <p>
+        Como usar o loop no array?
+        <h4 id="loop_of_array"></h4>
+    </p>
+    <hr>
+    <p>
+        Como adicionar um elemento no array?
+        <h4 id="adicionar_array"></h4>
+    </p>
+    <hr>
+    <p>
+        Criando um novo array?
+        <h4 id="new_array"></h4>
+    </p>
+    <hr>
+    <p>
+        Oarganizando alfabeticamente um novo array?
+        <h4 id="array_organizado_alfabeticamente"></h4>
+    </p>
+    <hr>
+    <p>
+        Invertendo alfabeticamente um novo array?
+        <h4 id="array_invertido_alfabeticamente"></h4>
+    </p>
+    <hr>
+    <p>
+        Criando um array só de numeros
+        <h4 id="array_numbers"></h4>
+    </p>
+    <hr>
+    <p>
+       Achando o valor máximo
+        <h4 id="max_number_array"></h4>
+    </p>
+    <hr>
+    <p>
+        Achando o valor minimo
+         <h4 id="min_number_array"></h4>
+     </p>
+     <hr>
+
+     <h3 style="background-color: pink;font-size: 23px;">ATIVIDADE ADICIONAL</h3>
+
+     <p>
+        Adicionando um elemento no inicio do array
+         <h4 id="adicionando_inicio_array"></h4>
+     </p>
+     <hr>
+     <p>
+        Removendo um elemento no inicio do array
+         <h4 id="removendo_inicio_array"></h4>
+     </p>
+     <hr>
+     <p>
+        Removendo um elemento no fim do array
+         <h4 id="removendo_fim_array"></h4>
+     </p>
+     <hr>
+     <p>
+        Juntando dois arrays
+         <h4 id="juntando_dois_arrays"></h4>
+     </p>
+
+    <script>
+        //Como declarar o array?
+        var fruits = ["Maça","Laranja","Manga"];
+        console.log(fruits);
+        document.getElementById("declarationOfArrays").innerHTML = fruits;
+
+        //Como buscar o primeiro elemento de um array?//
+        var firstFruit = fruits[0];
+        console.log(firstFruit);
+        document.getElementById("accessFirtsElement").innerHTML = firstFruit;
+
+        //Como buscar o segundo elemento de um array?  //
+        var secondFruit = fruits[1];
+        console.log(secondFruit);
+        document.getElementById("accessSecondElement").innerHTML = secondFruit;
+
+         //Como buscar o terceiro elemento de um array?  //
+         var thirdFruit = fruits[2];
+        console.log(thirdFruit);
+        document.getElementById("accessThirdElement").innerHTML = thirdFruit;
+
+        //Como buscar o comprimento de um array?  //
+        var lengthOfTheAray = fruits.length
+        console.log(lengthOfTheAray);
+        document.getElementById("display_length_of_array").innerHTML = lengthOfTheAray;
+
+        //Como usar loop atraés do array?
+        var arrayValue = "";
+        for(i=0;i<fruits.length;i++){
+            console.log(fruits[i]);
+            arrayValue=arrayValue + fruits[i] +"<br>"
+        }
+        document.getElementById("loop_of_array").innerHTML = arrayValue;
+
+        //Como adionar elemento em um array?  //
+        fruits.push("Limão");
+        console.log(fruits);
+        document.getElementById("adicionar_array").innerHTML = fruits;
+
+        //Como adionar elemento em um array?  //
+        fruits.push("Cereja");
+        console.log(fruits);
+        document.getElementById("adicionar_array").innerHTML = fruits;
+
+        //Declarando novo array para novo exmplo//
+        var alphabets = ["l","a","b","p","g","t","r","o"];
+        console.log(alphabets);
+        document.getElementById("new_array").innerHTML = alphabets;
+
+        //Organizando alfabeticamente o array//
+        alphabets.sort();
+        console.log(alphabets);
+        document.getElementById("array_organizado_alfabeticamente").innerHTML = alphabets;
+
+        //Invertendo alfabeticamente o array//
+        alphabets.reverse();
+        console.log(alphabets);
+        document.getElementById("array_invertido_alfabeticamente").innerHTML = alphabets;
+
+        //Declarando um array de numero//
+        var numbers = [57, 98, 3, 5, 12];
+        console.log(numbers);
+        document.getElementById("array_numbers").innerHTML = numbers;
+
+        //Encontrando o valor maximo em um array //
+        var max_numbers = Math.max.apply(Math,numbers);
+        console.log(max_numbers);
+        document.getElementById("max_number_array").innerHTML = max_numbers;
+
+        //Encontrando o valor minimo em um array //
+        var min_numbers = Math.min.apply(Math,numbers);
+        console.log(min_numbers);
+        document.getElementById("min_number_array").innerHTML = min_numbers;
+
+        //Adicionando no incio do array//
+        fruits.unshift("Morango");
+        console.log(fruits);
+        document.getElementById("adicionando_inicio_array").innerHTML = fruits;
+
+        //Removendo no incio do array//
+        fruits.shift();
+        console.log(fruits);
+        document.getElementById("removendo_inicio_array").innerHTML = fruits;
+
+         //Removendo no fim do array//
+         fruits.pop();
+        console.log(fruits);
+        document.getElementById("removendo_fim_array").innerHTML = fruits;
+
+        //Juntando dois arrays
+        var primeiro_array = ["EUA","CANADÁ","JAPÃO"];
+        var segundo_array = ["CHINA","RÚSSIA","ROMÊNIA"];
+        var todos_paises = primeiro_array.concat(segundo_array);
+        console.log(todos_paises);
+        document.getElementById("juntando_dois_arrays").innerHTML = todos_paises;
+    </script>
+</html>
